@@ -1,0 +1,41 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #fff0c8;
+}
+
+h1 {
+    text-align: left;
+}
+
+a {
+    color: #000;
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  a::before {
+    background: hsl(45 100% 70%);
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+  }
+  
+  a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  img {
+    width: 400px;
+    height: auto;
+    border: 5px solid #ff9900;
+    border-radius: 25px;
+  }
